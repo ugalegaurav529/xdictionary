@@ -38,21 +38,21 @@ function XDictionary() {
       {/* Input field for search term */}
       <input
         type="text"
-        placeholder="Enter a word..."
+        placeholder="Search for a word..."
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
         style={{ padding: '10px', width: '80%' }}
       />
+      {/* Result display */}
+      <div>
+        {result && <p style={{ marginTop: '20px', fontSize: '18px' }}><b>Definition:</b> {result}</p>}
+      </div>
 
       {/* Search button */}
       <button onClick={handleSearch} style={{ padding: '10px', marginTop: '10px', cursor: 'pointer' }}>
         Search
       </button>
 
-      {/* Result display */}
-      <div>
-        {result && <p style={{ marginTop: '20px', fontSize: '18px' }}>Definition: {result}</p>}
-      </div>
     </div>
   );
 }
